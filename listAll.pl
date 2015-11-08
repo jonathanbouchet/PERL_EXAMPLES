@@ -1,4 +1,6 @@
-my $directory='/Users/Jonathan/Desktop/WORK/PERL_CODE';
+#!/usr/bin/perl -w
+use Cwd;
+my $directory = getcwd;
 my $size=0;
 my $file;
 
