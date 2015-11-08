@@ -2,8 +2,7 @@ my $directory='/Users/Jonathan/Desktop/WORK/PERL_CODE';
 my $size=0;
 my $file;
 
-opendir(DIRHANDLE, $directory) or die "couldn't open $directory : $!\n
-+";
+opendir(DIRHANDLE, $directory) or die "couldn't open $directory : $!\n";
 my@files = grep(!/^\.\.?$/,readdir(DIRHANDLE));
 
 foreach $file (@files)
