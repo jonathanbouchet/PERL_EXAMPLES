@@ -1,9 +1,23 @@
 #!/usr/bin/perl -w
 
 use Cwd;
+use DateTime;
 #go to directory with forum names
 #my $directory = getcwd;
 my directory = "/data/WWW/hnstar";
+
+$datestring = localtime();
+print "Local date and time : $datestring\n";
+
+$datestringGMT = gmtime();
+print "GMT date and time : $datestringGMT\n";
+
+$epoc = time();
+print "Unix time : $epoc\n";
+
+my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime(time);
+my $now = sprintf("%04d-%02d-%02d %02d:%02d:%02d", $year+1900, $mon+1, $mday, $hour, $min, $sec);
+print "$now\n";
 
 print " current directory : $directory\n";
 opendir(DIRHANDLE, $directory) or die "couldn't open $directory : $!\n";
