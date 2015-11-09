@@ -3,7 +3,7 @@
 use Cwd;
 #go to directory with forum names
 #my $directory = getcwd;
-my drectory = "/data/WWW/hnstar";
+my directory = "/data/WWW/hnstar";
 
 print " current directory : $directory\n";
 opendir(DIRHANDLE, $directory) or die "couldn't open $directory : $!\n";
